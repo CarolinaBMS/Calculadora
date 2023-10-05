@@ -9,8 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     var operationType: OperationType?
-    
-    
     enum OperationType {
         case isSoma
         case isSubtract
@@ -18,25 +16,15 @@ class ViewController: UIViewController {
         case isDivide
     }
     
-    
     @IBOutlet weak var firstnumbertextfield: UITextField!
-    
     @IBOutlet weak var secondnumbertextfield: UITextField!
-    
     @IBOutlet weak var result: UILabel!
-    
     @IBOutlet weak var operatorsellectedlabel: UILabel!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         operatorsellectedlabel.text = ""
         result.text = ""
-        
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func addclicked(_ sender: Any) {
@@ -76,16 +64,6 @@ class ViewController: UIViewController {
         case .none:
             total = 0
         }
-//        if isSoma {
-//             total = firstNumber + secondNumber
-//        } else if isSubtract {
-//            total = firstNumber - secondNumber
-//        } else if isMultiply {
-//            total = firstNumber * secondNumber
-//        } else if isDivide {
-//            total = firstNumber / secondNumber
-//        }
-        //result.text = String(total ?? 0)
         result.text = String(format: "%.2f", total ?? 0)
     }
 }
